@@ -1,19 +1,5 @@
 totalsum = 0
 
-def remquest(guess):
-    for a in range(len(guess)):
-        if guess[a] == "?":
-            copyguess = list(guess)
-            copyguess[a] = "."
-            copy = ''.join(copyguess)
-            allpossible.append(copy)
-            copyguess[a] = "#"
-            copy = ''.join(copyguess)
-            allpossible.append(copy)    
-    return allpossible
-    
-
-
 with open("input.txt", "r") as f:
     for row in f:
         guess = row.strip().split(" ")[0]
